@@ -1,0 +1,231 @@
+/* max-width deve ser usado quando a tela é responsiva*/
+
+/* primeiro usa position, depois  top, bottom, left, ou right, senão eles não funcionam*/
+/*
+position: static        // nao afetado por top, bottom, left, ou right - de acordo com fluxo da pagina
+          relative      // relativo a sua posição normal, top, bottom, left, ou right são valores relativos
+          fixed         // sempre fica na mesma posição, mesmo com scroll
+          absolute      // relativo ao ancestral mais proximo
+          sticky        // relativo a posição de scroll do mouse
+*/ 
+
+/* float deixa responsivo, mas é melhor usar display: inline-box*/
+
+
+body {
+  /* background-color: Tomato; */
+  /* background-image: url("gradient_bg.png"); */
+  /* background-repeat: no-repeat; */
+  /* background-position: right top; */
+  /* background-attachment: fixed; */
+  background: #ffffff url("gradient_bg.png") no-repeat top;
+}
+
+p {
+  font-family: verdana;
+  font-size: 10px;
+  border-style: dotted;
+  /*border-style:dashed;
+  border-style: solid;
+  border-style: double;
+  border-style: groove;
+  border-style: ridge;
+  border-style: inset;
+  border-style: outset;
+  border-style: none;
+  border-style: hidden;
+  border-style: dotted dashed solid double;
+  border-width: 5px;
+  border-left: 6px solid red;
+  border-bottom: 10px solid green;*/
+  border: 2px solid blue;
+  border-radius: 5px;
+
+  line-height: 2;
+  direction: rtl;
+}
+
+h1 {
+  border:2px solid rgb(0, 0, 255);
+  /*margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;*/
+
+  /* padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;*/
+
+  outline-style: dotted;
+  /*outline-style: dashed;
+  outline-style: solid;
+  outline-style: double;
+  outline-style: groove;
+  outline-style: ridge;
+  outline-style: inset;
+  outline-style: outset;*/
+  outline-offset: 5px;
+
+  /*text-align: center;*/
+  text-align: justify;
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-indent: 50px;
+  letter-spacing: 3px;
+  
+  color: green;
+  width: 320px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0; 
+}
+
+h2 {
+  text-shadow: 3px 2px red;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+
+  /*font-size: 1.875em;*/
+  font-size:10vw;
+  font-weight: 900;
+
+  font-variant: small-caps;
+}
+
+div.teste {
+  height: 200px;
+  width: 50%;
+  background-color: powderblue;
+}
+
+.image {
+  /*globais*/
+  /*visibility: hidden;*/
+  float: right;
+  z-index: -1;
+  display: block;
+  position: relative;
+  top: 0%;
+  left: 10%;
+  width: auto;
+  height: auto;
+  animation-name: spinning;
+  animation-duration: 1s; /* or: Xms */
+  animation-iteration-count: infinite;
+  animation-direction: alternate; /* or: normal */
+  animation-timing-function: linear; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+  animation-fill-mode: forwards; /* or: backwards, both, none */
+}
+
+@keyframes spinning {
+  0% {transform: rotate(0deg) scale(0.1);}
+  100% {transform: rotate(360deg) scale(0.2);}
+}
+
+/*LINK*/
+a:link {
+  color: red;
+  text-decoration: none;
+  background-color: yellow;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  color: hotpink;
+}
+
+a:active {
+  color: blue;
+}
+
+#button-like-a:link, #button-like-a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#button-like-a:hover, #button-like-a:active {
+  background-color: red;
+}
+
+/*LIST*/
+ul.a {
+  list-style-type: square;
+  /* list-style-type: circle;*/
+  /*list-style-image: url('sq_purple.gif');*/
+  list-style-position: inside;
+}
+
+ol.d {
+  /* list-style-type: upper-roman; */
+  list-style-type: lower-alpha;
+  background: #ff9999;
+}
+
+li {
+  /*globais*/
+  display: block;
+  /*display: inline;*/
+}
+
+/*TABLE*/
+table, th, td {
+    border: 1px solid black;
+}
+
+table {
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+tr:hover {background-color: #f5f5f5;}
+
+th {
+  height: 50px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+td {
+  height: 50px;
+  vertical-align: bottom;
+}
+
+.overflow_c {
+  width: 200px;
+  height: 50px;
+  background-color: #eee;
+  
+  overflow: auto;
+  /*overflow: visible;
+  overflow: hidden;
+  overflow: scroll;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll*/
+}
+
+.floating-box {
+  display: inline-block;
+  width: 150px;
+  height: 75px;
+  margin: 10px;
+  border: 3px solid #73AD21;
+}
+
+.after-box {
+  clear: left;
+  border: 3px solid red;      
+}
